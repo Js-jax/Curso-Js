@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*function Pnombre(){
+
+      	var nombre;
+      	var x = new Array(nombre);
+
+
+      	for(i = 1 i <= 5; i++){
+      		x = new Array(x);
+      	nombre = prompt("Registra 5 nombres: ");
+      	}
+
+      }
+
+      	function lista(x){
+      		x.sort();
+      		document.write( nombre + "<br/>");
+
+      }
+
+      Pnombre();
+      lista();*/
+
+      function datos() {
+        for (var i = 1; i <= 5; i++) {
+          var nombre = prompt("Ingresa el " + i + " , nombre: ");
+
+          lista();
+        }
+      }
+
+      var arreglo = [];
+      function lista(nombre) {
+        arreglo.push(nombre);
+
+        if (arreglo.length == 5) {
+          document.write("Los nombres ordenados son : " + arreglo.sort());
+        }
+      }
+
+      datos();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       addEventListener("load",inicio);
+       
+       function inicio(){
+           document.getElementById("checkbox1").addEventListener("change",cambiocheckbox);
+           document.getElementById("radioa").addEventListener("change",cambioradio);
+           document.getElementById("radiob").addEventListener("change",cambioradio);
+           document.getElementById("select1").addEventListener("change",cambioselect);
+           document.getElementById("text1").addEventListener("change",cambiotext);
+       }
+
+       function cambiocheckbox(){
+           alert(document.getElementById("checkbox1").checked);
+       }
+
+       function cambioradio(){
+           alert(document.getElementById("radioa").checked + " | " + document.getElementById("radiob").checked);
+       }
+
+       function cambioselect(){
+           alert(document.getElementById("select1").value);
+       }
+
+       function cambiotext(){
+           alert(document.getElementById("text1").value);
+       }
+    </script>
+	Evento change del checkbox:
+    <input type="checkbox" name="" id="checkbox1" checked><br>
+	Evento change del radio:
+	<input type="radio" name="cambio" id="radioa">
+	<input type="radio" name="cambio" id="radiob"><br>
+    Evento change del select:<br>
+	<select name="select1" id="select1">
+        <option value="argentina">Argentina</option>
+		<option value="uruguay">Uruguay</option>
+		<option value="paraguay">Paraguay</option>
+		<option value="bolivia">Bolivia</option>
+    </select><br>
+    Evento change del text:<br>
+    <input type="text" name="" id="text1"><br>
+</body>
+</html>

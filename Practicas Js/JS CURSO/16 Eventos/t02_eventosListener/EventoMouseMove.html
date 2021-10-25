@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        addEventListener("load",inicio);
+
+		function inicio(){
+            document.getElementById("recuadro").addEventListener("mousemove",mover);
+            document.getElementById("recuadro").addEventListener("mouseout",limpiar);
+        }
+
+		function mover(){
+            var x = parseInt(document.getElementById("cantidad").innerHTML);
+			x++;
+			document.getElementById("cantidad").innerHTML = x;
+        }
+        
+        function limpiar(){
+            document.getElementById("cantidad").innerHTML = 0;    
+        }
+    </script>
+	<div style="width:200px;height:200px;background:#0000ff" id="recuadro"></div>
+    <p id="cantidad">0</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class Estaticos{
+            static mayor(n1, n2){
+                if(n1 > n2){
+                    return n1;
+                }else if(n1 < n2){
+                    return n2;
+                }else{
+                    return "Ambos numeros son iguales";
+                }
+            }
+        }
+        
+        var numero1 = 3;
+        var numero2 = 3;
+        
+        document.write(`El numero mayor entre ${numero1} y ${numero2} es: ${Estaticos.mayor(numero1,numero2)} <br/>`);
+    </script>
+</body>
+</html>

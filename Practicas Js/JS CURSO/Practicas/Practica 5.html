@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function vuelo() {
+        var totalm = 0;
+        var repetir;
+        var v1 = 25;
+        var v2 = 30;
+        var totalv = 0;
+
+        do {
+          var opcion = prompt(
+            "Opcion 1:   Primera Clase   Costo:5000" +
+              "Cantidad de Boletos: " +
+              v1 +
+              "\n Opcion 2:   Primera Clase   Costo:3500 " +
+              "Cantidad de Boletos: " +
+              v2
+          );
+          var x = parseInt(prompt("cuantos boletos quieres"));
+          var precio;
+          var zona;
+
+          switch (opcion) {
+            case "1":
+              precio = 5000;
+              v1 = v1 - x;
+              zona = "Primera clase ";
+              break;
+            case "2":
+              precio = 3500;
+              v2 = v2 - x;
+              zona = "Clase turista ";
+              break;
+            default:
+              document.write("Opcion incorreta");
+              break;
+          }
+          var monto = parseInt(x) * parseInt(precio);
+
+          alert("zona: " + zona + "\nBoletos:  " + x + "\n Monto: " + monto);
+          totalv = totalv + x;
+          totalm = totalm + monto;
+          repetir = prompt("Quieres realizar otra compra (s/n)");
+        } while (repetir == "s");
+
+        alert("Monto total :  " + totalm + "\n Total de boletos:  " + totalv);
+      }
+      vuelo();
+    </script>
+  </body>
+</html>

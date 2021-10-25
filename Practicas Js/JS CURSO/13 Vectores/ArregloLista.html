@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function lista() {
+        var arreglo = [20, 30, 40, 50, 60];
+
+        document.write("Metodo Length: " + arreglo.length + "<br/>");
+
+        arreglo.push(70); //agrega un elemento añ final del array
+        document.write("Metodo Push: " + arreglo + "<br/>");
+
+        arreglo.unshift(10); //agrega un elemto al inicio del array
+        document.write("Metodo unshift: " + arreglo + "<br/>");
+
+        arreglo.reverse();
+        document.write("Metodo Reverse: " + arreglo + "<br/>");
+
+        arreglo.shift(); //borra el primer elemento del array
+        document.write("Metodo Shift: " + arreglo + "<br/>");
+
+        arreglo.pop(); // borra el ultimo elemento del array
+        document.write("Metodo pop: " + arreglo + "<br/>");
+
+        /* delete arreglo[0]; //borra solo el valor mas no la posicion 
+			document.write("Metodo Delete: " + arreglo + "<br/>")*/
+
+        arreglo.splice(1, 2); // borra cierta cantidad de elementos
+        document.write("Metodo Splice: " + arreglo + "<br/>");
+
+        arreglo.toString(); // convierte a texto
+        document.write("Metodo toString: " + arreglo + "<br/>");
+
+        var nombres = ["Daniel", "Rodolfo", "Isabel", "Alejandro", "Jasmin"];
+
+        var posicion = nombres.indexOf("Rodolfo");
+        document.write(
+          "El nombre de Rodolfo esta en la posicion: " + posicion + "<br/>"
+        );
+
+        nombres.sort(); //ordena los elementos de una arreglo
+        document.write("Metodo sort: " + nombres + "<br/>");
+
+        nombres.reverse();
+        document.write("Metodo Reverse: " + nombres + "<br/>");
+      }
+
+      lista();
+    </script>
+  </body>
+</html>

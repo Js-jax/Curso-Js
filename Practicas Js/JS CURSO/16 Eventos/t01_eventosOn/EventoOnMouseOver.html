@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+		function pintar(col,tex){
+            document.bgColor = col;
+			document.getElementById("link1").style.color = tex;
+			document.getElementById("link2").style.color = tex;
+			document.getElementById("link3").style.color = tex;
+        }
+    </script>
+	<a href="#" onmouseover="pintar('#ff0000','#ffffff')" onmouseout="pintar('#ffffff','#000000')" id="link1">Rojo</a><br>
+	<a href="#" onmouseover="pintar('#00ff00','#ffffff')" onmouseout="pintar('#ffffff','#000000')" id="link2">Verde</a><br>
+	<a href="#" onmouseover="pintar('#0000ff','#ffffff')" onmouseout="pintar('#ffffff','#000000')" id="link3">Azul</a>
+</body>
+</html>

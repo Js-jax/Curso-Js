@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function avanzar(){
+            if(window.history.length > 0){
+                //window.history.forward();
+                window.history.go(1);
+            }else{
+                alert("No hay paginas en la cache hacia adelante");
+            }            
+        }
+    </script>
+    <a href="WindowHistoryBack.html">Ir a la pagina 2</a><br/>
+    <a href="javascript:avanzar()">Extraer del cache la segunda pagina</a>
+</body>
+</html>

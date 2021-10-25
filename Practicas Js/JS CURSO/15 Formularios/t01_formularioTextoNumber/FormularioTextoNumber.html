@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function datos(){
+            var nombre = document.getElementById("nombre").value;
+            var clave = document.getElementById("clave").value;
+            var edad = document.getElementById("edad").value;
+            var comentarios = document.getElementById("comentarios").value;
+            
+            document.write("Nombre: " + nombre + "<br/>");
+            document.write("Clave: " + clave + "<br/>");
+            document.write("Edad: " + edad + "<br/>");
+            document.write("Comentarios: " + comentarios + "<br/>");
+        }
+    </script>
+    <form action="#">
+        Ingresa tu nombre:
+        <input type="text" name="" id="nombre"><br>
+        Ingresa tu clave:
+        <input type="password" name="" id="clave"><br>
+        Ingresa tu edad:
+        <input type="number" name="" id="edad" min="18" max="50" value="28"><br>
+        Ingresa un comentario: <br>
+        <textarea name="" id="comentarios" cols="30" rows="10"></textarea><br>
+        
+        <input type="submit" value="Enviar" onclick="datos()">
+    </form>
+</body>
+</html>

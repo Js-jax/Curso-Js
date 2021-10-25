@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        addEventListener("load",inicio);
+
+        function inicio(){
+            document.getElementById("texto").addEventListener("keydown",presion);
+            //document.getElementById("texto").addEventListener("keyup",presion);
+        }
+
+		function presion(){
+            var cantidad = document.getElementById("texto").value.length;
+			var disponibles = 140 - parseInt(cantidad);
+            document.getElementById("cantidad").innerHTML = disponibles;
+        }
+        
+    </script>
+    Keydown:<br/>
+	<input type="text" id="texto" maxlength="140" size="140"><br/>
+	<p> Maxima cantidad de caracteres disponibles: <span id="cantidad">140</span></p>
+</body>
+</html>

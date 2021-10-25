@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function arreglo1() {
+        var bidimencional = new Array(new Array(1, 2, 3), new Array(4, 5, 6));
+
+        for (i = 0; i < bidimencional.length; i++) {
+          for (j = 0; j < bidimencional[i].length; j++) {
+            document.write(
+              "bidimencional[" +
+                i +
+                "][" +
+                j +
+                "]: " +
+                bidimencional[i][j] +
+                "<br/>"
+            );
+          }
+        }
+      }
+
+      function arreglo2() {
+        var numeroElementos;
+        var numeroColumnas;
+
+        numeroElementos = prompt("cuantas filas deseas crear????:  ");
+        numeroElementos = parseInt(numeroElementos);
+
+        numeroColumnas = prompt("cuantas columnas deseas crear: ");
+        numeroColumnas = parseInt(numeroColumnas);
+
+        var bidimencional = new Array(numeroElementos);
+
+        // CREA CONTENEDORES
+        for (i = 0; i < bidimencional.length; i++) {
+          bidimencional[i] = new Array(numeroColumnas);
+          for (j = 0; j < bidimencional[i].length; j++) {
+            bidimencional[i][j] = prompt(
+              "Introduce el elemento de la fila " +
+                (i + 1) +
+                ", columna " +
+                (j + 1) +
+                ":"
+            );
+            document.write(
+              "bidimencional[" +
+                i +
+                "][" +
+                j +
+                "]: " +
+                bidimencional[i][j] +
+                "<br/>"
+            );
+          }
+        }
+      }
+
+      //arreglo1();
+      arreglo2();
+    </script>
+  </body>
+</html>

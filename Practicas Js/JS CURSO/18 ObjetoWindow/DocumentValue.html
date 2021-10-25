@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function acceso(){
+            var usuario = document.formulario.usuario.value;
+            var clave = document.formulario.clave.value;                                   
+            if(usuario=="daniel" && clave=="123"){
+                window.location = "http://www.google.com";
+            }else{
+                alert("Usuario o Contraseña Incorrectos");
+            }
+        }
+    </script>
+    <!--funciona solo con el atributo name en el formulario-->
+    <form action="#" name="formulario">
+       Usuario:
+       <input type="text" name="" id="usuario"><br>
+       Clave:
+       <input type="password" name="" id="clave"><br>
+       <input type="submit" value="Enviar" onclick="acceso()">
+    </form>
+</body>
+</html>

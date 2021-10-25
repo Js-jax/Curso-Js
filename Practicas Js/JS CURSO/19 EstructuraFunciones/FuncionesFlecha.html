@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       var calcular = () => {
+           var numero1 = document.getElementById("numero1").value;
+           var numero2 = document.getElementById("numero2").value;
+            
+           area(radio(numero1,numero2));
+       }
+        
+       /*var radio = function(valor1, valor2){
+           var r = valor1 + valor2;
+            
+           return r;
+       }*/
+       
+       var radio = (valor1,valor2) => valor1 + valor2;
+        
+       var area = (r) => {
+           var area = Math.PI * Math.pow(r,2);
+            
+           document.getElementById("contenedor").innerHTML = "Area: " + area;
+       }
+    </script>
+    <form action="#">
+       Numero 1:
+       <input type="text" name="" id="numero1"><br>
+       Numero 2:
+       <input type="text" name="" id="numero2"><br>
+       <input type="submit" value="Calcular" onclick="calcular()"><br>
+       <div id="contenedor"></div>
+    </form>
+</body>
+</html>

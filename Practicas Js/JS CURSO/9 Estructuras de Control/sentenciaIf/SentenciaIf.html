@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function sencillo() {
+        var edad = 18;
+
+        if (edad >= 18) {
+          document.write("Eres mayor de edad <br/>");
+        } else {
+          document.write("Eres menor de edad <br/>");
+        }
+      }
+
+      function anidado() {
+        var numero1 = 7,
+          numero2 = 10;
+
+        if (numero1 > numero2) {
+          document.writeln("Numero 1 es mayor <br/>");
+        } else if (numero1 < numero2) {
+          document.writeln("Numero 2 es mayor <br/>");
+        } else {
+          document.writeln("Ambos numeros son iguales <br/>");
+        }
+      }
+
+      sencillo();
+      anidado();
+    </script>
+  </body>
+</html>

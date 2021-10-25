@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function datos() {
+        var sexo,
+          cursos = "";
+
+        if (document.getElementById("masculino").checked) {
+          sexo = "Masculino";
+        } else {
+          sexo = "Femenino";
+        }
+
+        if (document.getElementById("java").checked) {
+          cursos += "Java,";
+        }
+        if (document.getElementById("html").checked) {
+          cursos += "HTML,";
+        }
+        if (document.getElementById("mysql").checked) {
+          cursos += "MySQL,";
+        }
+
+        // document.write("Sexo: " + sexo + "<br/>");
+        document.write("Cursos: " + cursos + "<br/>");
+      }
+    </script>
+    <form action="#">
+      Sexo:
+      <input type="radio" name="sexo" id="masculino" />Masculino
+      <input type="radio" name="sexo" id="femenino" />Femenino <br />
+      Cursos:
+      <input type="checkbox" name="" id="java" />Java
+      <input type="checkbox" name="" id="html" />HTML
+      <input type="checkbox" name="" id="mysql" />MySQL <br />
+
+      <input type="submit" value="Enviar" onclick="datos()" />
+    </form>
+  </body>
+</html>

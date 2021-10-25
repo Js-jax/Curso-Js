@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function datos() {
+        //var golosina = "";
+        var nombre = document.getElementById("nombre").value;
+        var cantidad1 = document.getElementById("cantidad").value;
+        var boletos = document.getElementById("boletos").value;
+        var golosina = document.getElementById("golosina");
+        var pago= "";
+
+        document.write("Nombre: " + nombre + "<br/>");
+        document.write("Cantidad de Boletos : " + cantidad1 + "<br/>");
+        document.write("Tipo de Boleto  Elegido : " + boletos + "</br>");
+        document.write("Metodo de Pago: " + pago + "<br/>");
+
+        //document.write("Refrigerios: " + golosina + "<br/>");
+
+        for (var i = 0; i < golosina.length; i++) {
+          if (golosina[i].selected == true) {
+            document.write("Golosina  Eligida: " + golosina[i].text + "<br>");
+          }
+        }
+
+        if (document.getElementById("Tarjeta").checked) {
+          pago = "Tarjeta";
+        } else {
+          pago = "Efectivo";
+        }
+
+        /*
+          if (document.getElementById("palomitas").checked) {
+            golosina += "Palomitas,";
+          }
+          if (document.getElementById("refresco").checked) {
+            golosina += "Refresco,";
+          }
+        if (document.getElementById("chocolates").checked) {
+          golosina += "Chocolates,";
+        }
+        */
+      }
+    </script>
+
+    <form action="#">
+      Ingresa tu nombre:
+      <input type="text" name="" id="nombre" /><br />
+
+      Ingresa la cantidad de boletos:
+      <input type="number" id="cantidad" min="1" max="20" value="1" /><br />
+
+      Selecciona tus boletos:
+      <select name="" id="boletos">
+        <option value="Sencillo">Sencillo</option>
+        <option value="3D">3D</option>
+        <option value="Imax">Imax</option>
+      </select>
+      <br />
+
+      Refrigerios: <br />
+      <select name="" id="golosina" nultiple>
+        <option value="1">Palomitas</option>
+        <option value="2">Refresco</option>
+        <option value="3">Chocolates</option></select
+      ><br />
+
+      Metodo de Pago:
+      <input type="radio" name="pago" id="Efectivo" />Efectivo
+      <input type="radio" name="pago" id="Tarjeta" />Tarjeta </br>
+  
+      <!--
+        
+        <input type="checkbox" name="" id="Palomitas" />Palomitas <br />
+        <input type="checkbox" name="" id="Refresco" />Refresco<br />
+        <input type="checkbox" name="" id="Chocolates" />Chocolates <br />
+        
+      -->
+
+      <input type="submit" value="Enviar" onclick="datos()" />
+    </form>
+  </body>
+</html>

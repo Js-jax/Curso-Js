@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var resultado = "";
+		
+        class Operaciones{
+            constructor(n1, n2){
+                this.mesaje();
+                
+				n1 = parseFloat(n1);
+				n2 = parseFloat(n2);
+			
+                var res = n1 + n2;
+				resultado = "El resultado de la suma es: " + res + "<br/>";
+            }
+			
+            resta(n1, n2){
+				var res = n1 - n2;
+				document.getElementById("resultado").innerHTML = resultado + "El resultado de la resta es: " + res + "<br/>";
+			}
+            
+            mesaje(){
+                var nombre = "Daniel";
+                alert("POO: " + nombre);
+            }
+        }
+
+		function calcular(){
+            var num1 = document.getElementById("numero1").value;
+			var num2 = document.getElementById("numero2").value;
+
+			var o = new Operaciones(num1, num2);
+			o.resta(num1, num2);
+        }
+    </script>
+    <form action="#">
+       Numero 1:
+       <input type="text" name="" id="numero1"><br>
+       Numero 2:
+       <input type="text" name="" id="numero2"><br>
+       <input type="submit" value="Enviar" onclick="calcular()"><br>
+       <div id="resultado"></div>
+    </form>
+</body>
+</html>

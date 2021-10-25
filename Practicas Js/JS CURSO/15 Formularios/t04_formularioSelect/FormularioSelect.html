@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function datos(){
+            var pais = document.getElementById("pais");
+				
+			//indice del valor seleccionado
+			document.getElementById("indice").value = pais.selectedIndex;
+				
+			//del indice seleccionado muestra el texto
+			document.getElementById("texto").value = pais.options[pais.selectedIndex].text;
+				
+			//del indice seleccionado muestra el valor
+			document.getElementById("valor").value = pais.options[pais.selectedIndex].value;
+        }
+    </script>
+    <form action="#">
+        <select name="" id="pais">
+            <option value="1">México</option>
+            <option value="2">Estados Unidos</option>
+            <option value="3">Brasil</option>
+            <option value="4">Argentina</option>
+            <option value="5">Colombia</option>            
+        </select><br>
+        Indice:
+        <input type="text" name="" id="indice"><br>
+        Texto:
+        <input type="text" name="" id="texto"><br>
+        Valor:
+        <input type="text" name="" id="valor"><br>
+            
+        <input type="submit" value="Enviar" onclick="datos()">
+    </form>
+</body>
+</html>

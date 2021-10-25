@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function sencillo(){
+            var ventana = open();
+			ventana.document.write("Estoy escribiendo en la nueva ventana <br/>");
+        }
+        
+        function parametros(){
+            var ventana = open("http://www.google.com","_blank","width=400, height=250");
+        }
+    </script>
+    <form action="#">
+        <input type="submit" value="Open" onclick="sencillo()">
+        <input type="submit" value="Open Parametros" onclick="parametros()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function metodo1() {
+        arreglo = new Array(5);
+        arreglo[0] = "Daniel";
+        arreglo[1] = 25;
+        arreglo[2] = "h";
+        arreglo[3] = 9.5;
+        arreglo[4] = true;
+
+        // arreglo = new array("daniel",25,'h',9.5,true);
+
+        document.write("Texto: " + arreglo[0] + "</br>");
+        document.write("Numero: " + arreglo[1] + "</br>");
+        document.write("Caracter: " + arreglo[2] + "</br>");
+        document.write("Decimal : " + arreglo[3] + "</br>");
+        document.write("Boleano: " + arreglo[4] + "</br>");
+      }
+
+      function metodo2() {
+        var numeroElementos;
+        var arreglo;
+
+        numeroElementos = prompt("Cuantos elementos deseas crear?: ");
+        numeroElementos = parseInt(numeroElementos);
+
+        arreglo = new Array(numeroElementos);
+
+        for (var i = 0; i < arreglo.length; i++) {
+          var numero = prompt("Ingresa numero: " + (i + 1));
+          numero = parseFloat(numero);
+          arreglo[i] = numero;
+        }
+
+        for (var i = 0; i < arreglo.length; i++) {
+          document.write(
+            "El arreglo en la posicion [" +
+              i +
+              "] vale: " +
+              arreglo[i] +
+              "</br>"
+          );
+        }
+      }
+
+      //metodo1();
+      metodo2();
+    </script>
+  </body>
+</html>

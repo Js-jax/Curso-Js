@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function datos(){
+            var color = document.getElementById("color").value;
+            //var fecha = document.getElementById("fecha").value;
+            
+            document.getElementById("contenedor").style.backgroundColor = color;
+           // document.getElementById("contenedor").innerHTML = fecha;
+        }
+    </script>
+    <form action="#">
+       Selecciona un color:
+       <input type="color" name="" id="color"/><br/>
+       Selecciona la fecha:
+       <input type="date" name="" id="fecha"/><br/>
+       <div id="contenedor">
+           contenedor...
+       </div>
+       
+       <input type="submit" value="Enviar" onclick="datos()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function calcular(){
+            try{
+                var numero1 = document.getElementById("numero1").value;
+                var numero2 = document.getElementById("numero2").value;
+                
+                numero1 = parseInt(numero1);
+                numero2 = parseInt(numero2);
+                
+                var resultado = numero1 * numero2;
+                adlert("El resultado de la operacion es: " + resultado);                
+            }catch(err){
+                document.getElementById("contenedor").innerHTML = "Se produjo el error: " + err.message;
+            }                        
+        }        
+    </script>
+    <form action="#">
+       Numero 1:
+       <input type="text" name="" id="numero1"><br>
+       Nuemro 2:
+       <input type="text" name="" id="numero2"><br>
+       <input type="submit" value="Calcular" onclick="calcular()"><br>
+       <div id="contenedor"></div>
+    </form>
+</body>
+</html>

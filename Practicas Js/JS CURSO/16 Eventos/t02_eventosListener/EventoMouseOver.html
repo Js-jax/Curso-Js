@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       addEventListener("load",inicio);
+		
+       function inicio(){
+           document.getElementById("contenedor").addEventListener("mouseover",calcular);			document.getElementById("contenedor").addEventListener("mouseout",limpiar);
+       }
+
+       function calcular(){
+           var numero1 = parseInt(document.getElementById("numero1").value);
+           var numero2 = parseInt(document.getElementById("numero2").value);
+           
+           var resultado = numero1 + numero2;
+           document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + resultado;
+       }
+        
+       function limpiar(){
+           document.getElementById("resultado").innerHTML = "";
+       }
+    </script>
+	<form action="#">
+        Numero 1:
+		<input type="text" id="numero1"><br>
+		Numero 2:
+		<input type="text" id="numero2"><br>
+		
+    	<div id="contenedor"> Ver resultado | Ocultar resultado </div><br/>
+		<div id="resultado"></div>
+	</form>
+</body>
+</html>

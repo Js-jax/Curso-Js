@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class Herencia{
+            cargaDatos(){
+                //para que la variable sea reconocida en todo el documento debe llevar la palabra this
+                this.nombre = prompt("Nombre: ");
+                this.edad = prompt("Edad: ");
+            }
+        }
+        
+        class Hereda extends Herencia{
+            imprimeDatos(){
+                document.write("Nombre: " + this.nombre + "<br/>");
+                document.write("Edad: " + this.edad + "<br/>");
+            }
+        }
+        
+        var h = new Hereda();
+        //h.cargaDatos();
+        //h.imprimeDatos();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function datos(){
+            var paises = document.getElementById("paises");
+        
+            for (var i = 0; i < paises.length; i++) {
+                if(paises[i].selected ==true){              
+                    document.write(paises[i].text + '<br>');
+                }
+            }
+        }
+    </script>
+    <form action="#">
+        <select name="" id="paises" multiple>
+            <option value="1">México</option>
+            <option value="2">Estados Unidos</option>
+            <option value="3">España</option>
+            <option value="4">Italia</option>
+            <option value="5">Sudafrica</option>
+        </select><br>
+        
+        <input type="submit" value="Enviar" onclick="datos()">
+    </form>
+</body>
+</html>

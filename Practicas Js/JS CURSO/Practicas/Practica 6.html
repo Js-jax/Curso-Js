@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+      function texto() {
+        var nombre = prompt("ingresa tu nombre:  ");
+        var aux = nombre.toLowerCase();
+
+        const inicial = aux.charAt(0);
+
+        if (
+          inicial == "a" ||
+          inicial == "e" ||
+          inicial == "i" ||
+          inicial == "o" ||
+          inicial == "u"
+        ) {
+          document.write("Es vocal" + "</br>");
+        } else document.write("Es consonante" + "</br>");
+
+        var contador = 0;
+        for (var i = 0; i < aux.length; i++) {
+          var letra = aux.charAt(i);
+
+          if (
+            letra == "a" ||
+            letra == "e" ||
+            letra == "i" ||
+            letra == "o" ||
+            letra == "u"
+          );
+          {
+            contador++;
+          }
+        }
+        document.write("La cantidada de vocales es: " + contador + "</br>");
+      }
+
+      texto();
+    </script>
+  </head>
+  <body></body>
+</html>

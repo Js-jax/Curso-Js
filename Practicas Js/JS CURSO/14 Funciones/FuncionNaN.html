@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function datos() {
+        var numero1 = "Daniel";
+        var numero2 = 7;
+
+        var suma = numero1 + numero2; // si cambiamos el operador da como resultado NaN
+        docuemnt.write("El resultado de la suma es: " + suma + "<br/>");
+      }
+
+      function evaluar() {
+        var numero1 = "Isable";
+        var numero2 = 7;
+
+        if (isNaN(numero1) || isNaN(numero2)) {
+          document.write("Uno de los valores ingresados no es numerico <br/>");
+        } else {
+          var suma = numero1 + numero2;
+          document.write("El resultado de la suma es: " + suma + "<br/>");
+        }
+      }
+
+      evaluar();
+    </script>
+  </body>
+</html>

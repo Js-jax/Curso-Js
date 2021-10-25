@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <body>
+      <script type="text/javascript">
+        function sentencia() {
+          var repetir;
+
+          do {
+            var nombre = prompt("Ingresa el nombre: ", "nombre ");
+
+            document.write("Bienvenido:  ", nombre, "</br>");
+
+            repetir = prompt("¿Quieres registrar otro nombre (s/n)?");
+          } while (repetir == "s");
+        }
+
+        sentencia();
+      </script>
+    </body>
+  </head>
+</html>

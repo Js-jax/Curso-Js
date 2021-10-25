@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.addEventListener("load",inicio);
+        
+        function inicio(){
+            document.getElementById("formulario").addEventListener("submit",datos);
+        }
+        
+        function datos(){
+            var clave1 = document.getElementById("clave1").value;
+            var clave2 = document.getElementById("clave2").value;
+            
+            if(clave1 == clave2){
+                document.write("La contraseña es correcta <br/>");
+            }else{
+                document.write("Las contraseñas no coinciden <br/>");
+            }
+        }
+    </script>
+    <form action="#" id="formulario">
+       Ingresa una contraseña:
+       <input type="password" name="" id="clave1"><br>
+       Confirma la contraseña:
+       <input type="password" name="" id="clave2"><br>
+       
+       <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

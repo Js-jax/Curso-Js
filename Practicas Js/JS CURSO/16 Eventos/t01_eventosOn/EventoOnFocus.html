@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body onload="color()">
+    <script type="text/javascript">
+        function color(){
+            document.getElementById("caja1").style.backgroundColor = "#0000ff";
+            document.getElementById("caja2").style.backgroundColor = "#0000ff";
+        }
+        
+        function enfocar(elemento){            
+            elemento.style.backgroundColor = "#ff0000";
+        }
+        
+        function desenfocar(elemento){            
+            elemento.style.backgroundColor = "#000000";
+        }
+    </script>
+    <form action="#">
+       Caja 1:
+       <input type="text" name="" id="caja1" onfocus="enfocar(this)" onblur="desenfocar(this)"><br>
+       Caja 2:
+       <input type="text" name="" id="caja2" onfocus="enfocar(this)" onblur="desenfocar(this)"><br>
+    </form>
+</body>
+</html>
